@@ -7,8 +7,8 @@ const Cast = (props: any) => {
             <p className='text-xl font-semibold'>Cast Member</p>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6'>
                 {
-                    props?.cast?.cast && props?.cast?.cast.length > 0 && props?.cast?.cast.filter((element: any) => element.known_for_department == "Acting").map((ele: any) => {
-                        return <div className="flex flex-col gap-4 bg-white shadow-lg rounded-md">
+                    props?.cast?.cast && props?.cast?.cast.length > 0 && props?.cast?.cast.filter((element: any) => element.known_for_department == "Acting").map((ele: any,key:number) => {
+                        return <div className="flex flex-col gap-4 bg-white shadow-lg rounded-md" key={key}>
                             <div className="w-full h-[300px] relative"
                             >
                                 <Image src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${ele?.profile_path}`} alt="no image" layout="fill" />

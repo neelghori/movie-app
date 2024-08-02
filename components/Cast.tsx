@@ -11,7 +11,7 @@ const Cast = (props: any) => {
                         return <div className="flex flex-col gap-4 bg-white shadow-lg rounded-md" key={key}>
                             <div className="w-full h-[300px] relative"
                             >
-                                <Image src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${ele?.profile_path}`} alt="no image" layout="fill" />
+                                <Image src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${ele?.profile_path}`} alt="no image" layout="fill" objectFit='cover' />
                             </div>
                             <div className="flex flex-col gap-1 px-5 py-2">
                                 <p className="text-xl font-medium">{ele?.original_name}</p>

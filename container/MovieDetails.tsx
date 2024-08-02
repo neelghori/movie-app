@@ -8,7 +8,7 @@ const MovieDetails = (props:any) => {
     return (
         <div className='flex flex-col gap-16'>
             <div className='flex flex-col lg:flex-row gap-10'>
-                <div className="w-full h-[550px] relative object-contain text-left"
+                <div className="w-full h-[400px] lg:h-[550px] relative object-contain text-left"
                 >
                     <Image src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${props?.data?.poster_path}`} alt="no image" layout="fill" objectFit='contain' />
                 </div>

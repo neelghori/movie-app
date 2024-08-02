@@ -10,7 +10,7 @@ const MovieList = (props: any) => {
     const { loader, movieList, setSearch } = useMovies(props?.data);
     return (
         <>
-            <div className="flex justify-between">
+            <div className="flex flex-col md:flex-row gap-5 justify-between">
                 <h1 className="text-6xl font-bold">Movies</h1>
                 <Input type="text" name="search" className="border border-gray-500 pl-2 pr-10 rounded-lg py-3" placeholder="Search Movie..." onChange={(e) => setSearch(e.target.value)} />
             </div>
@@ -18,7 +18,7 @@ const MovieList = (props: any) => {
                 {
                     loader ? <SkeltonLoader /> : movieList?.results && movieList?.results?.length > 0 && movieList?.results?.map((element: any, key: number) => {
                         return <Link href={`${element?.id}`}><div className="flex flex-col gap-2 bg-white shadow-lg rounded-md" key={key}>
-                            <div className="w-full h-[500px] relative"
+                            <div className="w-full h-[400px] lg:h-[500px] relative"
                             >
                                 <Image src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${element?.poster_path}`} alt="no image" layout="fill" />
                             </div>

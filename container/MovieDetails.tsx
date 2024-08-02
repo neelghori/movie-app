@@ -1,5 +1,5 @@
 "use client"
-import Cast from '@movieapp/components/Cast'
+import Cast from '@movieapp/container/Cast'
 import moment from 'moment'
 import Image from 'next/image'
 import React from 'react'
